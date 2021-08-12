@@ -1,5 +1,4 @@
 package com.startjava.lesson_2_3_4.calculator;
-
 import java.util.Scanner;
 
 public class CalculatorTest {
@@ -9,18 +8,16 @@ public class CalculatorTest {
         Calculator calc = new Calculator();
 
         System.out.print("Нчать вычисления [yes/no]:");
-        String repeat = scanner.next();
+        String repeat = scanner.nextLine();
 
         while(repeat.equals("yes")) {
-            System.out.print("Введите первое число: ");
-            int num1 = scanner.nextInt();
+            System.out.print("Введите математическое выражение через пробел: ");
+            String[] words = scanner.nextLine().split("\\s+");
+            int num1 = Integer.parseInt(words[0]);
+            int num2 = Integer.parseInt(words[2]);
 
-            System.out.print("Введите знак математической операции: ");
-            char operation = scanner.next().charAt(0);
-
-            System.out.print("Введите второе число ");
-            int num2 = scanner.nextInt();
-            calc.calculate(num1, operation, num2);
+            calc.calculate(num1, words, num2);
+            calc.print();
             do
             {    
                 System.out.println("Хотите продолжить вычисления? [yes/no]:");

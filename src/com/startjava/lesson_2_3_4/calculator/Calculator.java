@@ -1,32 +1,37 @@
 package com.startjava.lesson_2_3_4.calculator;
 
 public class Calculator {
-   
-    public void calculate(int num1, char operation, int num2) {    
-        switch(operation) {
-            case '+':
-                System.out.println(num1 + num2);
+    int result;
+
+    public int calculate(int num1, String[] words, int num2) {
+
+        switch(words[1]) {
+            case "+":
+                result = num1 + num2;
                 break;
-            case '-':
-                System.out.println(num1 - num2);
+            case "-":
+                result = num1 - num2;
                 break;
-            case '*':
-                System.out.println(num1 * num2);
+            case "*":
+                result = num1 * num2;
                 break;
-            case '/':
-                System.out.println(num1 / num2);
+            case "/":
+                result = num1 / num2;
                 break;
-            case '%':
-                System.out.println(num1 % num2);
+            case "%":
+                result = num1 % num2;
                 break;
-            case '^':
-                int result = num1;
-                for (int i = 1; i < num2; i++) {
-                    result *= num1;
-                } System.out.println(result); 
+            case "^":
+                result = (int) Math.pow(num1, num2);
                 break;
             default:
                 System.out.println("Операция некорректна, повторите ввод");
         }
-    }    
+        return result;
+    }
+
+    public void print() {
+
+        System.out.println(result);
+    }
 }
