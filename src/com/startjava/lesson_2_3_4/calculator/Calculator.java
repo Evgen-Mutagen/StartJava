@@ -28,8 +28,7 @@ public class Calculator {
                 break;
             default:
                 System.out.println("Операция некорректна, повторите ввод");
-        }
-        return Integer.toString(result);
+        } return Integer.toString(result);
     }
 }
 
