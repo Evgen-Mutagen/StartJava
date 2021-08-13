@@ -3,7 +3,7 @@ package com.startjava.lesson_2_3_4.calculator;
 public class Calculator {
     int result;
 
-    public int calculate(int num1, String[] words, int num2) {
+    public void calculate(int num1, String[] words, int num2) {
 
         switch(words[1]) {
             case "+":
@@ -27,7 +27,6 @@ public class Calculator {
             default:
                 System.out.println("Операция некорректна, повторите ввод");
         }
-        return result;
     }
 
     public void print() {
