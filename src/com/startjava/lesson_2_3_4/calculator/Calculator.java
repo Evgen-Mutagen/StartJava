@@ -1,35 +1,29 @@
 package com.startjava.lesson_2_3_4.calculator;
 
 public class Calculator {
-    int result;
 
-    public String calculate(String str) {
-        String[] words = str.split(" ");
+    public int calculate(String splitExpression) {
+        String[] words = splitExpression.split(" ");
         int num1 = Integer.parseInt(words[0]);
         int num2 = Integer.parseInt(words[2]);
+        int result =0;
 
         switch(words[1]) {
             case "+":
-                result = num1 + num2;
-                break;
+                return num1 + num2;
             case "-":
-                result = num1 - num2;
-                break;
+                return num1 - num2;
             case "*":
-                result = num1 * num2;
-                break;
+                return num1 * num2;
             case "/":
-                result = num1 / num2;
-                break;
+                return num1 / num2;
             case "%":
-                result = num1 % num2;
-                break;
+                return num1 % num2;
             case "^":
-                result = (int) Math.pow(num1, num2);
-                break;
+                return  (int) Math.pow(num1, num2);
             default:
                 System.out.println("Операция некорректна, повторите ввод");
-        } return Integer.toString(result);
+        } return result;
     }
 }
 
