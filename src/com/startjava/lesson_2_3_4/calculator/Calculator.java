@@ -3,7 +3,8 @@ package com.startjava.lesson_2_3_4.calculator;
 public class Calculator {
     int result;
 
-    public String calculate(String[] words) {
+    public String calculate(String str) {
+        String[] words = str.split(" ");
         int num1 = Integer.parseInt(words[0]);
         int num2 = Integer.parseInt(words[2]);
 

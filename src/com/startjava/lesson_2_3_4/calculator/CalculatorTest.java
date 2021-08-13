@@ -11,9 +11,9 @@ public class CalculatorTest {
 
         do {
             System.out.print("Введите математическое выражение через пробел: ");
-            String[] words = scanner.nextLine().split("\\s+");
-            calc.calculate(words);
-            System.out.println(calc.calculate(words));
+            String str = scanner.nextLine();
+            calc.calculate(str);
+            System.out.println(calc.calculate(str));
             do {
                 System.out.println("Хотите продолжить вычисления? [yes/no]:");
                 repeat = scanner.next();
