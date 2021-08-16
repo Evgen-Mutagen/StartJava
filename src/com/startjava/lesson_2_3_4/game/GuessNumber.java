@@ -55,17 +55,21 @@ public class GuessNumber {
     }
 
     public void copyOfNumber1() {
+        System.out.print("Числа игрока " + player1.getName() + ": ");
         int[] number1Copy = Arrays.copyOf(array.getNumber1(), i);
-        for (int j = 0; j < number1Copy.length; j++) {
-            System.out.print(number1Copy[j] + " ");
-        } System.out.println(" ");
+        for (int k : number1Copy) {
+            System.out.print(k + " ");
+        }
+        System.out.println(" ");
     }
 
     public void copyOfNumber2() {
-            int [] number2Copy = Arrays.copyOf(array.getNumber2(), i);
-            for (int j= 0; j< number2Copy.length; j++)  {
-                System.out.print(number2Copy[j] + " ");
-            } System.out.println(" ");
+        System.out.print("Числа игрока " + player2.getName() + ": ");
+        int [] number2Copy = Arrays.copyOf(array.getNumber2(), i);
+        for (int k : number2Copy) {
+            System.out.print(k + " ");
+        }
+        System.out.println(" ");
     }
 
     public void reset() {
