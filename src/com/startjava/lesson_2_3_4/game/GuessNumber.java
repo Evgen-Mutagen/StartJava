@@ -19,7 +19,7 @@ public class GuessNumber {
 
     public void start() {
         Scanner scan = new Scanner(System.in);
-        int secretNumber = 55;
+        int secretNumber = (int) (Math.random() * 101);;
 
         for (i = 0; i < 10; i++) {
             System.out.println("игрок " + player1.getName() + " введите число : ");
