@@ -1,4 +1,5 @@
 package com.startjava.lesson_2_3_4.game;
+
 import java.util.Scanner;
 
 public class GuessNumberTest {
@@ -17,7 +18,12 @@ public class GuessNumberTest {
 
         String repeat;
         do {
+            System.out.println("У каждого игрока 10 попыток");
             game.start();
+            game.copyOfNumber1();
+            game.copyOfNumber2();
+            game.reset();
+
             do {    
                 System.out.println("Хотите продолжить игру? [yes/no]:");
                 repeat = scan.next(); 
