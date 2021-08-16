@@ -37,12 +37,11 @@ public class GuessNumber {
                 System.out.println("У игрока " + player1.getName() + " закончились попытки");
             }
 
-
             System.out.println("игрок " + player2.getName() + " введите число : ");
             number2[i] = scan.nextInt();
             if (number2[i] == secretNumber) {
                 System.out.println("Победил " + player2.getName() + " с " + (i + 1) + " попытки" + " Это было число - " + secretNumber);
-
+                i++;
                 break;
             } else if (number2[i] < secretNumber) {
                 System.out.println("Число " + player2.getName() + " меньше числа компьютера");
