@@ -2,7 +2,8 @@ package com.startjava.lesson_2_3_4.game;
 
 public class Player {
     private String name;
-    private int[] number = new int[10];
+    int[] numbersOfPlayer1 = new int[10];
+    int[] numbersOfPlayer2 = new int[10];
 
     public Player(String name) {
 
@@ -13,11 +14,8 @@ public class Player {
 
         return name;
     }
-
-
-
-
-
-
-
 }
+
+
+
+
