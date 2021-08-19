@@ -18,14 +18,14 @@ public class GuessNumber {
         int secretNumber = (int) (Math.random() * 101);
         for (i = 0; i < 10; i++) {
             System.out.println("игрок " + player1.getName() + " введите число : ");
-            player1.numbersOfPlayer1[i] = scan.nextInt();
-            if (player1.numbersOfPlayer1[i] == secretNumber) {
+            player1.getEnteredNumbers()[i] = scan.nextInt();
+            if (player1.getEnteredNumbers()[i] == secretNumber) {
                 System.out.println("Победил " + player1.getName() + " с " + (i + 1) + " попытки" + " Это было число - " + secretNumber);
                 i++;
                 break;
-            } else if (player1.numbersOfPlayer1[i]  < secretNumber) {
+            } else if (player1.getEnteredNumbers()[i]  < secretNumber) {
                 System.out.println("Число " + player1.getName() + " меньше числа компьютера");
-            } else if (player1.numbersOfPlayer1[i]  > secretNumber) {
+            } else if (player1.getEnteredNumbers()[i]  > secretNumber) {
                 System.out.println("Число " + player1.getName() + " больше числа компьютера");
             }
             if (i == 9) {
@@ -33,14 +33,14 @@ public class GuessNumber {
             }
 
             System.out.println("игрок " + player2.getName() + " введите число : ");
-            player2.numbersOfPlayer2[i]  = scan.nextInt();
-            if (player2.numbersOfPlayer2[i]  == secretNumber) {
+            player2.getEnteredNumbers()[i]   = scan.nextInt();
+            if (player2.getEnteredNumbers()[i] == secretNumber) {
                 System.out.println("Победил " + player2.getName() + " с " + (i + 1) + " попытки" + " Это было число - " + secretNumber);
                 i++;
                 break;
-            } else if (player2.numbersOfPlayer2[i] < secretNumber) {
+            } else if (player2.getEnteredNumbers()[i] < secretNumber) {
                 System.out.println("Число " + player2.getName() + " меньше числа компьютера");
-            } else if (player2.numbersOfPlayer2[i] > secretNumber) {
+            } else if (player2.getEnteredNumbers()[i] > secretNumber) {
                 System.out.println("Число " + player2.getName() + " больше числа компьютера");
             }
             if (i == 9) {
@@ -53,19 +53,19 @@ public class GuessNumber {
 
     public void copyOfNumbers() {
         System.out.print("Числа игрока " + player1.getName() + ": ");
-        int[] number1Copy = Arrays.copyOf(player1.numbersOfPlayer1, i);
+        int[] number1Copy = Arrays.copyOf(player1.getEnteredNumbers(), i);
         for (int k : number1Copy) {
             System.out.print(k + " ");
         } System.out.println(" ");
 
         System.out.print("Числа игрока " + player2.getName() + ": ");
-        int[] number2Copy = Arrays.copyOf(player2.numbersOfPlayer2, i);
+        int[] number2Copy = Arrays.copyOf(player2.getEnteredNumbers(), i);
         for (int k : number2Copy) {
             System.out.print(k + " ");
         } System.out.println(" ");
     }
     public void reset() {
-        Arrays.fill(player1.numbersOfPlayer1,0, i+1,0 );
-        Arrays.fill(player2.numbersOfPlayer2,0, i+1,0);
+        Arrays.fill(player1.getEnteredNumbers(),0, i+1,0 );
+        Arrays.fill(player2.getEnteredNumbers(),0, i+1,0);
     }
 }
