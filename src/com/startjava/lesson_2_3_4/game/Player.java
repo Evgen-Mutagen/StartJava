@@ -6,7 +6,6 @@ public class Player {
     private String name;
     private int[] enteredNumbers = new int[10];
 
-
     public Player(String name) {
         this.name = name;
     }
@@ -26,6 +25,7 @@ public class Player {
     public int[] getCopyEnteredNumbers(int attemptsOfPlayer) {
         return Arrays.copyOf(enteredNumbers, attemptsOfPlayer-1);
     }
+
     public void reset(int attemptsOfPlayer) {
         Arrays.fill(enteredNumbers, 0, attemptsOfPlayer - 1, 0);
     }
