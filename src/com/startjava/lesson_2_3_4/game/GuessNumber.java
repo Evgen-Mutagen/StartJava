@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class GuessNumber {
     private Player player1;
     private Player player2;
-    private int attempts=1;
+    private int attempts = 1;
     int secretNumber = (int) (Math.random() * 101);
     Scanner scan = new Scanner(System.in);
 
