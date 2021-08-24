@@ -14,16 +14,16 @@ public class Player {
         return name;
     }
 
-    public void  setEnteredNumber(int attemptsOfPlayer, int number) {
-        enteredNumbers[attemptsOfPlayer-1] = number;
+    public void setEnteredNumber(int attemptsOfPlayer, int number) {
+        enteredNumbers[attemptsOfPlayer - 1] = number;
     }
 
     public int getEnteredNumber(int attemptsOfPlayer) {
-        return enteredNumbers[attemptsOfPlayer-1];
+        return enteredNumbers[attemptsOfPlayer - 1];
     }
 
     public int[] getCopyEnteredNumbers(int attemptsOfPlayer) {
-        return Arrays.copyOf(enteredNumbers, attemptsOfPlayer-1);
+        return Arrays.copyOf(enteredNumbers, attemptsOfPlayer - 1);
     }
 
     public void reset(int attemptsOfPlayer) {
