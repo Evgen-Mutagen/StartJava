@@ -44,14 +44,13 @@ public class GuessNumber {
     }
 
     private boolean compareOfNumber(Player player) {
-        String answer = " числа компьютера";
+        String moreLess = player.getEnteredNumber(attempts) < secretNumber ? " меньше " : " больше ";
         if (player.getEnteredNumber(attempts) == secretNumber) {
             System.out.println("Победил " + player.getName() + " с " + attempts +
                     " попытки" + " Это было число - " + secretNumber);
             return true;
         }
-        System.out.println("Число " + player.getName() + (player.getEnteredNumber(attempts) < secretNumber ?
-                " меньше" + answer : " больше" + answer));
+        System.out.println("Число " + player.getName() + moreLess + "числа компьютера");
         return false;
     }
 
