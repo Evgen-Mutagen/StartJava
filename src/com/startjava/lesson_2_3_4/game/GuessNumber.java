@@ -21,7 +21,6 @@ public class GuessNumber {
                 break;
             }
             attempts++;
-
         } while (true);
         showPlayerNumbers(player1);
         showPlayerNumbers(player2);
